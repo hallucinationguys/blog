@@ -12,7 +12,7 @@ const PostReview = (props: PostMetadata) => {
     <Link href={`/posts/${props.slug}`}>
       <Card
         className="border-2 border-slate-300 rounded-md shadow-sm bg-white 
-        dark:bg-purpose-100 dark:border-transparent
+        dark:bg-dark-300 dark:border-transparent
         transition ease-in-out delay-50 
         hover:-translate-y-4 hover:scale-125 motion-reduce:transition-none motion-reduce:hover:transform-none 
         duration-150 drop-shadow-xl min-h-full "
