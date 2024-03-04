@@ -11,6 +11,19 @@ const config: Config = {
     './src/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
+    screens: {
+      mobile: '450px',
+      // => @media (min-width: 450px) { ... }
+
+      tablet: '640px',
+      // => @media (min-width: 640px) { ... }
+
+      laptop: '1024px',
+      // => @media (min-width: 1024px) { ... }
+
+      desktop: '1280px',
+      // => @media (min-width: 1280px) { ... }
+    },
     extend: {
       colors: {
         pink: {
@@ -25,8 +38,8 @@ const config: Config = {
           800: '#1B1B1B',
           900: '#272727',
         },
-        purpose: { 
-          100: '#c3b4fc1a'
+        purpose: {
+          100: '#c3b4fc1a',
         },
         'black-rgba': 'rgba(0, 0, 0, 0.8)',
       },

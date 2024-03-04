@@ -14,47 +14,49 @@ import {
 } from '@/components/ui/dropdown-menu'
 
 const navigationItems = [
-  { title: 'About us', path: 'https://github.com/The-System-Guys' },
+  { title: 'About us', path: 'https://github.com/hallucinationguys' },
 ]
 
 const Header = () => {
   return (
     <header>
-      <div className="w-full flex p-8 ">
-        <div className="mx-2 flex flex-row  w-full items-center">
-          <Link className="flex flex-row items-center" href="/">
-            <Image
-              alt="Picture of the Hallucination Guys"
-              className="w-20 h-16 mx-4 rounded-full"
-              height={512}
-              src={GoatLogo}
-              width={512}
-            />
-            <p className="text-xl font-bold whitespace-nowrap hover:underline">
-              Hallucination Guys
-            </p>
-          </Link>
+      <div className="w-full flex">
+        <div className="w-full items-center mobile:flex justify-between">
+          <div className="flex flex-wrap tablet:inline-block tablet:mr-12">
+            <Link className="flex flex-row items-center w-fit m-4" href="/">
+              <Image
+                alt="Picture of the Hallucination Guys"
+                className="w-16 h-16 mr-2 rounded-full object-cover object-center"
+                src={GoatLogo}
+              />
+              <p className="text-xl font-bold hover:underline whitespace-nowrap">
+                Hallucination Guys
+              </p>
+            </Link>
+          </div>
 
-          <nav className="flex w-full justify-end">
-            <ModeToggle />
-            <div className="items-center px-4 self-center">
-              <ul className="flex flex-row ">
-                {navigationItems.map((item, idx) => (
-                  <li
-                    key={idx}
-                    className="text-gray-700 dark:text-gray-700  hover:underline mx-2 "
-                  >
-                    <Link
-                      className="text-gray-700 dark:text-gray-300 hover:text-pink-700 dark:hover:text-pink-700"
-                      href={item.path}
+          <div className="mx-4 mt-4 flex-wrap tablet:inline-block tablet:ml-12 hidden mobile:flex">
+            <nav className="flex flex-row justify-end ">
+              <ModeToggle />
+              <div className="items-center px-4 self-center">
+                <ul className="flex flex-row whitespace-nowrap">
+                  {navigationItems.map((item, idx) => (
+                    <li
+                      key={idx}
+                      className="text-gray-700 dark:text-gray-700  hover:underline mx-2 "
                     >
-                      {item.title}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </nav>
+                      <Link
+                        className="text-gray-700 dark:text-gray-300 hover:text-pink-700 dark:hover:text-pink-700"
+                        href={item.path}
+                      >
+                        {item.title}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </nav>
+          </div>
         </div>
       </div>
     </header>

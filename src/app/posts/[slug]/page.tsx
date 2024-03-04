@@ -1,4 +1,4 @@
-import fs from 'fs'
+import * as fs from 'fs'
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
 import { tomorrow } from 'react-syntax-highlighter/dist/esm/styles/prism'
 import matter, { GrayMatterFile } from 'gray-matter'
@@ -52,11 +52,11 @@ const PostPage = (props: any) => {
       <header>
         <title>{unescape(props.params.slug)}</title>
       </header>
-      <div className="flex flex-col justify-center items-center w-full">
+      <div className=" w-full flex flex-col justify-center items-center p-4 mt-4">
         <h1 className="font-extrabold items-start text-3xl mb-4">
           {unescape(props.params.slug)}
         </h1>
-        <article className="prose md:prose-md lg:prose-lg prose-stone text-pretty">
+        <article className="prose md:prose-md lg:prose-lg prose-stone text-pretty w-full ">
           <MDXRemote components={{ code }} source={post.content} />
         </article>
       </div>
